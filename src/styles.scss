@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import './theme/custom-material.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'san-francisco-regular';
+  font-size: 17px;
+}
