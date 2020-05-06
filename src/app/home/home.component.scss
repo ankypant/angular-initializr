@@ -1,0 +1,22 @@
+.container {
+	margin-top: 20px;
+	padding: 0 60px;
+
+	.example-form {
+		min-width: 150px;
+		max-width: 500px;
+		width: 100%;
+	}
+
+	.example-full-width {
+		width: 100%;
+	}
+
+	.login-status {
+		background-color: var(--success);
+		color: #fff;
+		width: 40%;
+		padding: 20px;
+		margin: 20px;
+	}
+}
