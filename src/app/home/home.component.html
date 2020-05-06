@@ -3,16 +3,16 @@
 		<form class="example-form">
 			<mat-form-field class="example-full-width">
 				<mat-label>User name</mat-label>
-				<input matInput class="username" type="text" />
+				<input matInput id="username" type="text" />
 			</mat-form-field>
 			<mat-form-field class="example-full-width">
 				<mat-label>Password</mat-label>
-				<input matInput class="password" type="password" />
+				<input matInput id="password" type="password" />
 			</mat-form-field>
 			<button
 				mat-raised-button
 				color="warn"
-				class="login-button"
+				id="login-button"
 				type="button"
 				(click)="showLoginStatus = true"
 			>
