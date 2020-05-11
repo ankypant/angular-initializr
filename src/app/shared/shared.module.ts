@@ -11,11 +11,19 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRippleModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+/**
+ * Shared components, pipes, directives
+ */
+import * as fromComponents from './components';
 
 /**
  * Angular Material modules
  */
 const ngMaterialModules: any[] = [
+	MatButtonModule,
 	MatChipsModule,
 	MatDatepickerModule,
 	MatIconModule,
@@ -23,14 +31,7 @@ const ngMaterialModules: any[] = [
 	MatRippleModule,
 	MatTabsModule,
 	MatToolbarModule,
-	MatButtonModule,
 ];
-
-/**
- * Shared components, pipes, directives
- */
-import * as fromComponents from './components';
-import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
 	declarations: [
@@ -38,6 +39,7 @@ import { MatButtonModule } from '@angular/material/button';
 		// ...fromPipes.pipes,
 	],
 	imports: [
+		BrowserAnimationsModule,
 		CommonModule,
 		FlexLayoutModule,
 		RouterModule,
