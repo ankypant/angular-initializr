@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 import { SharedModule } from '@shared/shared.module';
+import { TestingModule } from '@utils/testing.module';
 
 describe('HomeComponent', () => {
 	let component: HomeComponent;
@@ -9,12 +10,12 @@ describe('HomeComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			imports: [SharedModule],
+			imports: [SharedModule, TestingModule],
 			declarations: [HomeComponent],
-		});
+		}).compileComponents();
 	}));
 
-	beforeEach(async () => {
+	beforeEach(() => {
 		fixture = TestBed.createComponent(HomeComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();

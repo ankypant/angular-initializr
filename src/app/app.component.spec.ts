@@ -3,7 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { SharedModule } from '@shared/shared.module';
 
-describe('AppComponent', () => {
+fdescribe('AppComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			imports: [RouterTestingModule, SharedModule],

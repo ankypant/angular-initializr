@@ -12,7 +12,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /**
  * Shared components, pipes, directives
@@ -39,7 +38,6 @@ const ngMaterialModules: any[] = [
 		// ...fromPipes.pipes,
 	],
 	imports: [
-		BrowserAnimationsModule,
 		CommonModule,
 		FlexLayoutModule,
 		RouterModule,
