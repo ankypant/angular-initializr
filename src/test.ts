@@ -13,6 +13,13 @@ Object.defineProperty(window, 'getComputedStyle', {
 Object.defineProperty(document, 'doctype', {
 	value: '<!DOCTYPE html>',
 });
+
+Object.defineProperty(window, 'matchMedia', {
+	value: jest.fn(() => {
+		return { matches: true };
+	}),
+});
+
 Object.defineProperty(document.body.style, 'transform', {
 	value: () => {
 		return {

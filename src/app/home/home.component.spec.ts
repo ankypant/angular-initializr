@@ -16,11 +16,6 @@ describe('HomeComponent', () => {
 	}));
 
 	beforeEach(() => {
-		Object.defineProperty(window, 'matchMedia', {
-			value: jest.fn(() => {
-				return { matches: true };
-			}),
-		});
 		fixture = TestBed.createComponent(HomeComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
@@ -32,5 +27,15 @@ describe('HomeComponent', () => {
 
 	it('should check if showLoginStatus is false', () => {
 		expect(component.showLoginStatus).toBeFalsy();
+	});
+
+	it('should call firstToLaunch() after ngOnInit is called', () => {
+		const spy = jest.spyOn(component, 'firstToLaunch');
+		component.ngOnInit();
+		expect(spy).toHaveBeenCalled();
+	});
+
+	it('should match the snapshot', () => {
+		expect(component).toMatchSnapshot();
 	});
 });

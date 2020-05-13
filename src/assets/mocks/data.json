@@ -1,0 +1,9 @@
+{
+	"userDetails": {
+		"id": 1,
+		"name": "Ankit Pant",
+		"email": "ankit12.pant@gmail.com",
+		"website": "https://ankitpant.com",
+		"isAdmin": true
+	}
+}

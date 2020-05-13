@@ -9,5 +9,11 @@ export class HomeComponent implements OnInit {
 	public showLoginStatus = false;
 	constructor() {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		this.firstToLaunch();
+	}
+
+	public firstToLaunch() {
+		console.log('called');
+	}
 }
