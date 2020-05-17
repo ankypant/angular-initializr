@@ -5,11 +5,12 @@ const routes: Routes = [
 	{
 		path: '',
 		pathMatch: 'full',
-		redirectTo: 'home',
+		redirectTo: 'login',
 	},
 	{
-		path: '**',
-		redirectTo: 'home',
+		path: 'login',
+		loadChildren: () =>
+			import('./login/login.module').then(l => l.LoginComponentModule),
 	},
 	{
 		path: 'home',
@@ -19,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-	imports: [RouterModule.forRoot(routes, { useHash: true })],
+	imports: [RouterModule.forRoot(routes)],
 	exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -15,7 +15,7 @@ describe('Login spec', () => {
 		cy.get('#login-button').click();
 	});
 
-	it('should display logged in message', () => {
-		cy.get('.login-status').should('have.text', 'Logged In');
+	it('should navigate to home page', () => {
+		cy.url().should('include', '/home');
 	});
 });

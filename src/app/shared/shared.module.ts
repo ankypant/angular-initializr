@@ -12,9 +12,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCardModule } from '@angular/material/card';
 
 /**
- * Shared components, pipes, directives
+ * Shared components, pipes, directives, services
  */
 import * as fromComponents from './components';
 
@@ -23,6 +25,7 @@ import * as fromComponents from './components';
  */
 const ngMaterialModules: any[] = [
 	MatButtonModule,
+	MatCardModule,
 	MatChipsModule,
 	MatDatepickerModule,
 	MatIconModule,
@@ -30,6 +33,7 @@ const ngMaterialModules: any[] = [
 	MatRippleModule,
 	MatTabsModule,
 	MatToolbarModule,
+	MatSnackBarModule,
 ];
 
 @NgModule({

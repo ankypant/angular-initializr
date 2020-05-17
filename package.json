@@ -5,6 +5,7 @@
 		"ng": "ng",
 		"start": "ng serve",
 		"dev": "json-server --watch ./src/assets/mocks/data.json & ng serve",
+		"json:server": "json-server --watch ./src/assets/mocks/data.json",
 		"build": "ng build",
 		"test": "jest",
 		"test:watch": "jest --watch",
