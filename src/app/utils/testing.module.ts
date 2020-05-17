@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CoreModule } from '@core/core.module';
+import { SharedModule } from '@shared/shared.module';
 
 /**
  * Create fake routerLinkActive directive to fix RouterTestingModule
@@ -21,8 +23,15 @@ export class RouterLinkActiveDirective {}
 		NoopAnimationsModule,
 		RouterTestingModule,
 		ReactiveFormsModule,
+		CoreModule,
+		SharedModule,
 	],
-	exports: [RouterLinkActiveDirective],
+	exports: [
+		RouterTestingModule,
+		RouterLinkActiveDirective,
+		CoreModule,
+		SharedModule,
+	],
 	providers: [],
 })
 export class TestingModule {}

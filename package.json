@@ -10,7 +10,7 @@
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"lint": "ng lint",
-		"cy:open": "concurrently \"ng serve\" \"cypress open\"",
+		"cy:open": "concurrently \"json-server --watch ./src/assets/mocks/data.json\" \"ng serve\" \"cypress open\"",
 		"cy:run": "cypress run"
 	},
 	"private": true,
