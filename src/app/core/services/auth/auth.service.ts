@@ -24,12 +24,10 @@ export class AuthService {
 		// 		tap(userDetails => this.authSubject.next(userDetails)),
 		// 		shareReplay()
 		// 	);
-		return this.httpClient
-			.get<UserDetails>('http://localhost:3000/userDetails')
-			.pipe(
-				tap(userDetails => this.authSubject.next(userDetails))
-				// shareReplay()
-			);
+		return this.httpClient.get<UserDetails>('userDetails').pipe(
+			tap(userDetails => this.authSubject.next(userDetails))
+			// shareReplay()
+		);
 	}
 
 	public logout(): void {

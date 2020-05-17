@@ -3,14 +3,14 @@
 	"version": "0.0.1",
 	"scripts": {
 		"ng": "ng",
-		"start": "ng serve",
+		"start": "ng serve --proxy-config proxy.config.json",
 		"dev": "json-server --watch ./src/assets/mocks/data.json & ng serve",
 		"json:server": "json-server --watch ./src/assets/mocks/data.json",
 		"build": "ng build",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"lint": "ng lint",
-		"cy:open": "concurrently \"json-server --watch ./src/assets/mocks/data.json\" \"ng serve\" \"cypress open\"",
+		"cy:open": "concurrently \"json-server --watch ./src/assets/mocks/data.json\" \"ng serve --proxy-config proxy.config.json\" \"cypress open\"",
 		"cy:run": "cypress run"
 	},
 	"private": true,
