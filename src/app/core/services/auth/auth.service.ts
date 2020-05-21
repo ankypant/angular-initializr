@@ -44,6 +44,11 @@ export class AuthService {
 		this.storageService.set(USER_DETAILS, null);
 	}
 
+	/** Checks the local storage and return a boolean */
+	public isLoggedIn(): boolean {
+		return !!this.storageService.get(USER_DETAILS);
+	}
+
 	private init() {
 		this.userDetails$ = this.authSubject.asObservable();
 		this.isLoggedIn$ = this.userDetails$.pipe(map(user => !!user));

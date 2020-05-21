@@ -1,8 +1,15 @@
 <div class="container">
-	<div fxLayout="column" fxLayoutAlign="center center">
+	<div class="form-wrapper" fxLayout="column" fxLayoutAlign="center center">
 		<mat-card>
-			<form class="example-form" [formGroup]="loginForm">
-				<mat-form-field class="example-full-width">
+			<div class="angular-logo">
+				<img src="assets/icons/angular.svg" alt="angular-logo" height="160px" />
+			</div>
+			<form
+				[formGroup]="loginForm"
+				fxLayout="column"
+				fxLayoutAlign="center center"
+			>
+				<mat-form-field>
 					<mat-label>User name</mat-label>
 					<input
 						formControlName="username"
@@ -12,7 +19,7 @@
 						autocomplete="username"
 					/>
 				</mat-form-field>
-				<mat-form-field class="example-full-width">
+				<mat-form-field>
 					<mat-label>Password</mat-label>
 					<input
 						formControlName="password"

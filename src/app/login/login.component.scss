@@ -1,23 +1,21 @@
 .container {
-	margin-top: 20px;
-	padding: 0 60px;
-
-	.example-form {
-		min-width: 150px;
-		max-width: 500px;
-		width: 100%;
+	padding-top: 20px;
+	height: calc(100% - 84px);
+	// background-color: var(--grey);
+	.form-wrapper {
+		mat-card {
+			padding: 20px;
+		}
+		mat-form-field {
+			width: 300px;
+		}
+		button {
+			width: 100%;
+		}
 	}
 
-	.example-full-width,
-	button {
-		width: 100%;
-	}
-
-	.login-status {
-		background-color: var(--success);
-		color: #fff;
-		width: 40%;
-		padding: 20px;
-		margin: 20px;
+	.angular-logo {
+		display: flex;
+		justify-content: center;
 	}
 }

@@ -4,6 +4,7 @@ import { NoCacheHeadersInterceptor } from './interceptors/no-cache-header.interc
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './services/auth/auth.service';
 import { StorageService } from './services/storage/storage.service';
+import { AuthGaurd } from './services/auth/auth.gaurd';
 
 @NgModule({
 	declarations: [],
@@ -14,6 +15,7 @@ import { StorageService } from './services/storage/storage.service';
 			useClass: NoCacheHeadersInterceptor,
 			multi: true,
 		},
+		AuthGaurd,
 		AuthService,
 		StorageService,
 	],

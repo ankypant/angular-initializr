@@ -23,6 +23,7 @@ export class ErrorhandlingService {
 	private showSnackBar(text: string, duration: number = 10000) {
 		this.snackBar.open(text, 'close', {
 			duration,
+			horizontalPosition: 'right',
 		});
 	}
 }

@@ -26,6 +26,8 @@ export class LoginComponent implements OnInit {
 		this.fillDummyFormValues();
 	}
 
+	/* Calls login in AuthService if the form is valid
+	 **/
 	public login() {
 		if (this.loginForm.invalid) {
 			this.errorhandlingService.showError('Please enter all the details', null);
@@ -41,11 +43,16 @@ export class LoginComponent implements OnInit {
 				this.router.navigateByUrl('home');
 			},
 			error => {
-				this.errorhandlingService.showError('Not able to login', error);
+				this.errorhandlingService.showError(
+					'Some error occured while login in',
+					error
+				);
 			}
 		);
 	}
 
+	/* Fills the login form with dummy data
+	 **/
 	private fillDummyFormValues() {
 		this.loginForm.patchValue({
 			username: 'ankitpant',
