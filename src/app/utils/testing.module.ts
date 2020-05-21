@@ -7,7 +7,6 @@ import { CoreModule } from '@core/core.module';
 import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
-	declarations: [],
 	imports: [
 		CommonModule,
 		NoopAnimationsModule,
@@ -16,7 +15,6 @@ import { SharedModule } from '@shared/shared.module';
 		CoreModule,
 		SharedModule,
 	],
-	exports: [CoreModule, SharedModule],
-	providers: [],
+	exports: [CoreModule, RouterTestingModule, SharedModule],
 })
 export class TestingModule {}

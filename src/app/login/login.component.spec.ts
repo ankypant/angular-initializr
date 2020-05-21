@@ -27,4 +27,18 @@ describe('LoginComponent', () => {
 	it('should test snapshot of LoginComponent', () => {
 		expect(LoginComponent).toMatchSnapshot();
 	});
+
+	it('should initialize login form', () => {
+		component.ngOnInit();
+		expect(component.loginForm.get('username').value).not.toBeNull();
+		expect(component.loginForm.get('password').value).not.toBeNull();
+	});
+
+	it('should validate login form', () => {
+		component.loginForm.patchValue({
+			username: null,
+			password: null,
+		});
+		expect(component.loginForm.valid).toBeFalsy();
+	});
 });

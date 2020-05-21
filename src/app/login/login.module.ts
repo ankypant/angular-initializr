@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login.component';
 import { SharedModule } from '../shared/shared.module';
+import { CoreModule } from '@core/core.module';
 
 @NgModule({
 	imports: [
@@ -14,6 +15,7 @@ import { SharedModule } from '../shared/shared.module';
 			},
 		]),
 		SharedModule,
+		CoreModule,
 	],
 	declarations: [LoginComponent],
 })

@@ -1,5 +1,5 @@
 export interface AuthDetails {
-	emailId: string;
+	username: string;
 	password: string;
 }
 
