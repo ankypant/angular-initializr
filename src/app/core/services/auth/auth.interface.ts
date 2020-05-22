@@ -7,7 +7,7 @@ export interface UserDetails {
 	id: number;
 	name: string;
 	email: string;
-	imageUrl: string;
-	website: string;
+	imageUrl?: string;
+	website?: string;
 	isAdmin: boolean;
 }
