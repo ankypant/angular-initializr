@@ -1,3 +1,3 @@
 export const storageKeys = {
-	userDetails: 'angular_init_keys',
+  userDetails: 'angular_init_keys',
 };

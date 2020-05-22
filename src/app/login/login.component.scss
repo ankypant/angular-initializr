@@ -1,25 +1,25 @@
 .container {
-	padding-top: 20px;
-	height: calc(100% - 84px);
-	background-color: var(--grey);
-	background-repeat: repeat-x;
-	.form-wrapper {
-		mat-card {
-			padding: 20px;
-			img {
-				border-radius: 100%;
-				background: var(--crimson);
-			}
-		}
-		mat-form-field {
-			width: 300px;
-		}
-		button {
-			width: 100%;
-		}
-	}
-	.angular-logo {
-		display: flex;
-		justify-content: center;
-	}
+  padding-top: 20px;
+  height: calc(100% - 84px);
+  background-color: var(--grey);
+  background-repeat: repeat-x;
+  .form-wrapper {
+    mat-card {
+      padding: 20px;
+      img {
+        border-radius: 100%;
+        background: var(--crimson);
+      }
+    }
+    mat-form-field {
+      width: 300px;
+    }
+    button {
+      width: 100%;
+    }
+  }
+  .angular-logo {
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -24,38 +24,38 @@ import * as fromComponents from './components';
  * Angular Material modules
  */
 const ngMaterialModules: any[] = [
-	MatButtonModule,
-	MatCardModule,
-	MatChipsModule,
-	MatDatepickerModule,
-	MatIconModule,
-	MatInputModule,
-	MatRippleModule,
-	MatTabsModule,
-	MatToolbarModule,
-	MatSnackBarModule,
+  MatButtonModule,
+  MatCardModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatIconModule,
+  MatInputModule,
+  MatRippleModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatSnackBarModule,
 ];
 
 @NgModule({
-	declarations: [
-		...fromComponents.components,
-		// ...fromPipes.pipes,
-	],
-	imports: [
-		CommonModule,
-		FlexLayoutModule,
-		RouterModule,
-		FormsModule,
-		ReactiveFormsModule,
-		...ngMaterialModules,
-	],
-	exports: [
-		FlexLayoutModule,
-		FormsModule,
-		ReactiveFormsModule,
-		...fromComponents.components,
-		// ...fromPipes.pipes,
-		...ngMaterialModules,
-	],
+  declarations: [
+    ...fromComponents.components,
+    // ...fromPipes.pipes,
+  ],
+  imports: [
+    CommonModule,
+    FlexLayoutModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ...ngMaterialModules,
+  ],
+  exports: [
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ...fromComponents.components,
+    // ...fromPipes.pipes,
+    ...ngMaterialModules,
+  ],
 })
 export class SharedModule {}

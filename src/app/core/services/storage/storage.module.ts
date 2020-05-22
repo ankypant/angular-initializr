@@ -5,6 +5,6 @@ import { StorageService } from './storage.service';
 @NgModule({
   declarations: [],
   imports: [CommonModule],
-  providers: [StorageService]
+  providers: [StorageService],
 })
 export class StorageModule {}

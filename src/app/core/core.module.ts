@@ -7,17 +7,17 @@ import { StorageService } from './services/storage/storage.service';
 import { AuthGaurd } from './services/auth/auth.gaurd';
 
 @NgModule({
-	declarations: [],
-	imports: [CommonModule, HttpClientModule],
-	providers: [
-		{
-			provide: HTTP_INTERCEPTORS,
-			useClass: NoCacheHeadersInterceptor,
-			multi: true,
-		},
-		AuthGaurd,
-		AuthService,
-		StorageService,
-	],
+  declarations: [],
+  imports: [CommonModule, HttpClientModule],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: NoCacheHeadersInterceptor,
+      multi: true,
+    },
+    AuthGaurd,
+    AuthService,
+    StorageService,
+  ],
 })
 export class CoreModule {}

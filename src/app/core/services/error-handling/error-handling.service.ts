@@ -3,27 +3,27 @@ import { Observable, throwError } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
-	providedIn: 'root',
+  providedIn: 'root',
 })
 export class ErrorhandlingService {
-	constructor(private snackBar: MatSnackBar) {}
-	public showError<T>(text: string, error: T): Observable<T> {
-		// show the error message to the user
-		this.showSnackBar(text);
+  constructor(private snackBar: MatSnackBar) {}
+  public showError<T>(text: string, error: T): Observable<T> {
+    // show the error message to the user
+    this.showSnackBar(text);
 
-		// @goToHave - Log Error to Google Analytics
+    // @goToHave - Log Error to Google Analytics
 
-		// log errors to console
-		console.error(text, error);
+    // log errors to console
+    console.error(text, error);
 
-		// throw error
-		return throwError(error);
-	}
+    // throw error
+    return throwError(error);
+  }
 
-	private showSnackBar(text: string, duration: number = 10000) {
-		this.snackBar.open(text, 'close', {
-			duration,
-			horizontalPosition: 'right',
-		});
-	}
+  private showSnackBar(text: string, duration: number = 10000) {
+    this.snackBar.open(text, 'close', {
+      duration,
+      horizontalPosition: 'right',
+    });
+  }
 }
