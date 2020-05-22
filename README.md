@@ -65,4 +65,4 @@ open the cypress window.
 
 ## Author
 
-**Ankit Pant**
+[Ankit Pant](https://ankitpant.com)
