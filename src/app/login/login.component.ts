@@ -1,20 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '@core/services/auth/auth.service';
 import { ErrorhandlingService } from '@core/services/error-handling/error-handling.service';
 import { UserDetails, AuthDetails } from '@core/services/auth/auth.interface';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   public loginForm = this.formBuilder.group({
     username: ['', Validators.required],
     password: ['', Validators.required],
   });
+
+  private destroy$ = new Subject<void>();
+
   constructor(
     public authService: AuthService,
     private errorhandlingService: ErrorhandlingService,
@@ -26,10 +31,16 @@ export class LoginComponent implements OnInit {
     this.fillDummyFormValues();
   }
 
+  ngOnDestroy(): void {
+    this.destroy$.next(null);
+    this.destroy$.unsubscribe();
+  }
+
   /**
    * Calls login in AuthService if the form is valid
    */
   public login() {
+    // check if the form is valid (if disabled attr is removed by inspect element)
     if (this.loginForm.invalid) {
       this.errorhandlingService.showError('Please enter all the details', null);
       return;
@@ -38,17 +49,20 @@ export class LoginComponent implements OnInit {
       username: this.loginForm.get('username').value,
       password: this.loginForm.get('password').value,
     };
-    this.authService.login(authDetails).subscribe(
-      (userDetails: UserDetails) => {
-        this.router.navigateByUrl('home');
-      },
-      error => {
-        this.errorhandlingService.showError(
-          'Some error occured while login in',
-          error
-        );
-      }
-    );
+    this.authService
+      .login(authDetails)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(
+        (userDetails: UserDetails) => {
+          this.router.navigateByUrl('home');
+        },
+        error => {
+          this.errorhandlingService.showError(
+            'Some error occured while login in',
+            error
+          );
+        }
+      );
   }
 
   /**

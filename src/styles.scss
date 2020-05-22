@@ -11,3 +11,8 @@ body {
   font-family: 'san-francisco-regular';
   font-size: 17px;
 }
+
+.container {
+  // Headers height in px minus the remaining space
+  height: calc(100% - 64px);
+}
