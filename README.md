@@ -2,20 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
 
-This is a angular start project, which will reduce the complexity of settings up
+This is a Angular starter project, which will reduce the complexity of settings up
 a base project everytime.
 
-I have tried to follow all the best practices, from official and other Angular geeks ;)
-and have added customize material theme, angular flex-layout, navGuards, Http-interceptor,
-Lazy loading, json-server, proxy-config.json etc.
+I have tried to follow all the best practices, from official and other Angular geeks 😉
+and I have also customized the default material theme, added angular flex-layout,
+navGuards, Http-interceptor, Lazy loading, Shared modules, Core modules, json-server,
+proxy-config.json etc.
 
-I have also replace `Jasime & Karma` with `Jest` (with some unit testing) to increase the performance,
-this starter project also comes with `Cypress` testing framework (example included).
+I have also replaced the default unit testing frameworks `Jasime & Karma` with `Jest` (with some unit testing) to increase the performance.
+This starter project also comes with the awesome `Cypress` testing framework (Login example included), which
+replaces the default `e2e` framework used in Angular projects.
 
-I have added Login and home component with some code, so that you get familiar with
-this starter project.
+It also comes with Login and home component (with some code) as an example, so that you get familiar with
+this starter project and the way it is been setted up.
 
-I hope you enjoy it and find it interesting :D
+I hope you love and enjoy this starter template, and also find it interesting 😎
 
 If you have any questions, you can mail me at `mail@ankitpant.com` or `ankit12.pant@gmail.com`.
 
@@ -23,9 +25,11 @@ If you have any questions, you can mail me at `mail@ankitpant.com` or `ankit12.p
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## json server
+## Json server
 
 Run `npm run json-server` for a json server. Navigate to `http://localhost:3000/`.
+Don't forget to start the json server before you try to login, as it is required
+to get dummy user details.
 
 ## Build
 
@@ -33,17 +37,23 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io/).
+Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io/)
+or `npm run test:watch` to watch the changes in the unit testing while you code them.
+This project will also generate the code coverage which can be seen by hosting/deploying
+coverage folder.
 
-## Running Integration tests
+## Running Automation
 
 Run `npm run cy:open` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
+Running this command should deploy angular project, json-server and also should
+open the cypress window.
 
 ## Built With
 
-- [Angular9](https://angular.io)
+- [Angular](https://angular.io)
 - [Angular Material](https://material.angular.io)
 - [Angular Flex layout](https://github.com/angular/flex-layout)
+- [Jest](https://jestjs.io/)
 - [Cypress](https://www.cypress.io/)
 - [HTML](https://www.w3.org/html/)
 - [SCSS](https://sass-lang.com/)
