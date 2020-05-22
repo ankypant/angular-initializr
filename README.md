@@ -50,9 +50,9 @@ open the cypress window.
 
 ## Screenshots
 
-![preview](https://raw.githubusercontent.com/Anky001/angular-initializr/33ed3b04975ffa6e93aa88eccbfd2712607e6b1c/src/assets/screenshots/login-component.png)
+![preview](https://raw.githubusercontent.com/Anky001/angular-initializr/master/src/assets/screenshots/login-component.png)
 
-## Built With
+## Built With ❤️ and
 
 - [Angular](https://angular.io)
 - [Angular Material](https://material.angular.io)
