@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     password: ['', Validators.required],
   });
 
-  private destroy$ = new Subject<void>();
+  // # as per new ts version 3.7+ makes the field private
+  #destroy$ = new Subject<void>();
 
   constructor(
     public authService: AuthService,
@@ -32,8 +33,8 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.destroy$.next(null);
-    this.destroy$.unsubscribe();
+    this.#destroy$.next(null);
+    this.#destroy$.unsubscribe();
   }
 
   /**
@@ -51,7 +52,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     };
     this.authService
       .login(authDetails)
-      .pipe(takeUntil(this.destroy$))
+      .pipe(takeUntil(this.#destroy$))
       .subscribe(
         (userDetails: UserDetails) => {
           this.router.navigateByUrl('home');

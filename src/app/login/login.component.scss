@@ -4,6 +4,7 @@
   background-color: var(--grey);
   background-repeat: repeat-x;
   .form-wrapper {
+    height: calc(100% - 20px);
     mat-card {
       padding: 20px;
       img {

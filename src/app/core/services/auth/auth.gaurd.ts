@@ -10,7 +10,7 @@ export class AuthGaurd implements CanActivate {
   canActivate(): boolean {
     /**
      *  if the user is not logged in then
-     *  return false and navigate to Login
+     *  return false and navigate to the Login page
      */
     if (!this.authService.isLoggedIn()) {
       this.router.navigateByUrl('login');
