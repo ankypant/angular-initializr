@@ -48,6 +48,10 @@ Run `npm run cy:open` to execute the end-to-end tests via [Cypress](https://www.
 Running this command should deploy angular project, json-server and also should
 open the cypress window.
 
+## Screenshots
+
+![preview](https://raw.githubusercontent.com/Anky001/angular-initializr/33ed3b04975ffa6e93aa88eccbfd2712607e6b1c/src/assets/screenshots/login-component.png)
+
 ## Built With
 
 - [Angular](https://angular.io)
