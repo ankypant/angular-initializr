@@ -1,10 +1,8 @@
 .container {
-  padding-top: 20px;
-  height: calc(100% - 84px);
   background-color: var(--grey);
   background-repeat: repeat-x;
   .form-wrapper {
-    height: calc(100% - 20px);
+    height: 100%;
     mat-card {
       padding: 20px;
       img {

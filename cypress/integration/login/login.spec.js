@@ -16,6 +16,6 @@ describe('Login spec', () => {
   });
 
   it('should navigate to home page', () => {
-    cy.url().should('include', '/home');
+    cy.url().should('include', 'home');
   });
 });
