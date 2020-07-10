@@ -15,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
 
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from '@shared/components/header/header.component';
 
 /**
  * Shared components
