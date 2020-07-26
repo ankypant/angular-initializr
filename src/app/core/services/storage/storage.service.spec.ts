@@ -30,7 +30,7 @@ describe('StorageService', () => {
 
   it('should get stored value in json format', () => {
     service.set('jsonKey', { username: 'Ankit Pant' });
-    expect(service.get('jsonKey')).toStrictEqual({ username: 'Ankit Pant' });
+    expect(service.get('jsonKey')).toEqual({ username: 'Ankit Pant' });
   });
 
   it('should return true if localstorage has the key', () => {

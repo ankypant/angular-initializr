@@ -24,10 +24,6 @@ describe('LoginComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should test snapshot of LoginComponent', () => {
-    expect(LoginComponent).toMatchSnapshot();
-  });
-
   it('should initialize login form', () => {
     component.ngOnInit();
     expect(component.loginForm.get('username').value).not.toBeNull();
