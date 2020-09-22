@@ -1,6 +1,6 @@
 # Angular-initializr
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.x.
 
 This is a Angular starter project, which will reduce the complexity of settings up
 a base project everytime.
@@ -10,7 +10,6 @@ and I have also customized the default material theme, added angular flex-layout
 navGuards, Http-interceptor, Lazy loading, Shared modules, Core modules, json-server,
 proxy-config.json etc.
 
-I have also replaced the default unit testing frameworks `Jasime & Karma` with `Jest` (with some unit testing) to increase the performance.
 This starter project also comes with the awesome `Cypress` testing framework (Login example included), which
 replaces the default `e2e` framework used in Angular projects.
 
@@ -23,11 +22,11 @@ If you have any questions, you can mail me at `mail@ankitpant.com` or `ankit12.p
 
 ## Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Json server
 
-Run `npm run json-server` for a json server. Navigate to `http://localhost:3000/`.
+Run `yarn json-server` for a json server. Navigate to `http://localhost:3000/`.
 Don't forget to start the json server before you try to login, as it is required
 to get dummy user details.
 
@@ -37,14 +36,14 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io/)
-or `npm run test:watch` to watch the changes in the unit testing while you code them.
+Run `yarn test` to execute the unit tests via [Jest](https://jestjs.io/)
+or `yarn test:watch` to watch the changes in the unit testing while you code them.
 This project will also generate the code coverage which can be seen by hosting/deploying
 coverage folder.
 
 ## Running Automation
 
-Run `npm run cy:open` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
+Run `yarn cy:open` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
 Running this command should deploy angular project, json-server and also should
 open the cypress window.
 
@@ -57,7 +56,8 @@ open the cypress window.
 - [Angular](https://angular.io)
 - [Angular Material](https://material.angular.io)
 - [Angular Flex layout](https://github.com/angular/flex-layout)
-- [Jest](https://jestjs.io/)
+- [Jasmin](https://jasmine.github.io/)
+- [Karma](https://karma-runner.github.io/latest/index.html)
 - [Cypress](https://www.cypress.io/)
 - [HTML](https://www.w3.org/html/)
 - [SCSS](https://sass-lang.com/)
