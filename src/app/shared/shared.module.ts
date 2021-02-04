@@ -15,12 +15,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
 
-import { HeaderComponent } from '@shared/components/header/header.component';
-
 /**
  * Shared components
  */
-export const components: any[] = [HeaderComponent];
+import * as fromComponents from './components';
 
 /**
  * Angular Material modules
@@ -39,7 +37,7 @@ const ngMaterialModules: any[] = [
 ];
 
 @NgModule({
-  declarations: [...components],
+  declarations: [...fromComponents.components],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -52,7 +50,7 @@ const ngMaterialModules: any[] = [
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    ...components,
+    ...fromComponents.components,
     ...ngMaterialModules,
   ],
 })

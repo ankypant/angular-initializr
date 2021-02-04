@@ -3,11 +3,16 @@ import {
   HttpRequest,
   HttpInterceptor,
   HttpHandler,
+  HttpEvent,
 } from '@angular/common/http';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable()
 export class NoCacheHeadersInterceptor implements HttpInterceptor {
-  intercept(req: HttpRequest<any>, next: HttpHandler) {
+  intercept(
+    req: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
     const authReq = req.clone({
       setHeaders: {
         'Cache-Control': 'no-cache',

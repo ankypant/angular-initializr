@@ -49,7 +49,7 @@ export class AuthService {
     return !!this.storageService.get(USER_DETAILS);
   }
 
-  private init() {
+  private init(): void {
     this.userDetails$ = this.authSubject.asObservable();
     this.isLoggedIn$ = this.userDetails$.pipe(map(user => !!user));
 
