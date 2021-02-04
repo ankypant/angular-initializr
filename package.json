@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.config.json",
-    "dev": "json-server --watch ./src/assets/mocks/data.json",
-    "json-server": "json-server --watch ./src/assets/mocks/data.json",
+    "server": "json-server --watch ./src/assets/mocks/data.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
