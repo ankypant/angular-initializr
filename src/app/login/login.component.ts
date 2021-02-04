@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   /**
    * Calls login in AuthService if the form is valid
    */
-  public login() {
+  public login(): void {
     // check if the form is valid (if disabled attr is removed by inspect element)
     if (this.loginForm.invalid) {
       this.errorhandlingService.showError('Please enter all the details', null);
@@ -67,9 +67,9 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   /**
-   *  Fills the login form with dummy data
+   *  Patches the login form with dummy data
    */
-  private fillDummyFormValues() {
+  private fillDummyFormValues(): void {
     this.loginForm.patchValue({
       username: 'ankitpant',
       password: 'dummyPassword#1',

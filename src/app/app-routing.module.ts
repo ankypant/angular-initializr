@@ -15,7 +15,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('./home/home.module').then(m => m.HomeComponentModule),
+      import('./home/home.module').then(h => h.HomeComponentModule),
   },
   {
     path: '**',

@@ -5,9 +5,6 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRippleModule } from '@angular/material/core';
@@ -16,28 +13,34 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
 
 /**
- * Shared components
+ *  SharedModule should not be providing any services,
+ *  as these could be instantiated more than once when importing
+ *  the SharedModule multiple times.
+ *  Instead, move your singleton services into a new module called CoreModule
  */
-import * as fromComponents from './components';
 
-/**
- * Angular Material modules
- */
+// Shared components
+import * as fromComponents from './components';
+import * as fromPipes from './pipes';
+import * as fromDirective from './directives';
+
+// Angular Material modules
 const ngMaterialModules: any[] = [
   MatButtonModule,
   MatCardModule,
-  MatChipsModule,
-  MatDatepickerModule,
   MatIconModule,
   MatInputModule,
   MatRippleModule,
-  MatTabsModule,
   MatToolbarModule,
   MatSnackBarModule,
 ];
 
 @NgModule({
-  declarations: [...fromComponents.components],
+  declarations: [
+    ...fromComponents.components,
+    ...fromPipes.pipes,
+    ...fromDirective.directives,
+  ],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -51,6 +54,8 @@ const ngMaterialModules: any[] = [
     FormsModule,
     ReactiveFormsModule,
     ...fromComponents.components,
+    ...fromPipes.pipes,
+    ...fromDirective.directives,
     ...ngMaterialModules,
   ],
 })
