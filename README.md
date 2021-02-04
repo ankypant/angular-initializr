@@ -1,6 +1,6 @@
 # Angular-initializr
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.x.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.x.
 
 This is a Angular starter project, which will reduce the complexity of settings up
 a base project everytime.
@@ -26,7 +26,7 @@ Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`. The app
 
 ## Json server
 
-Run `yarn json-server` for a json server. Navigate to `http://localhost:3000/`.
+Run `yarn server` for a json server. Navigate to `http://localhost:3000/`.
 Don't forget to start the json server before you try to login, as it is required
 to get dummy user details.
 
@@ -36,7 +36,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `yarn test` to execute the unit tests via [Jest](https://jestjs.io/)
+Run `yarn test` to execute the unit tests via [Karma](https://karma-runner.github.io/latest/index.html)
 or `yarn test:watch` to watch the changes in the unit testing while you code them.
 This project will also generate the code coverage which can be seen by hosting/deploying
 coverage folder.
