@@ -1,9 +1,10 @@
 {
-  "extends": "../tsconfig.base.json",
+  "extends": "../tsconfig.app.json",
   "compilerOptions": {
-    "allowJs": true,
     "baseUrl": "../node_modules",
+    "target": "es2015",
+    "lib": ["es2018", "dom"],
     "types": ["cypress"]
   },
-  "include": ["**/*.*"]
+  "include": ["**/*.ts"]
 }
