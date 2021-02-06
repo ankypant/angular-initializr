@@ -5,7 +5,6 @@ import { PwaService } from './pwa.service';
 @NgModule({
   imports: [CommonModule],
   providers: [
-    PwaService,
     {
       provide: APP_INITIALIZER,
       useFactory: (service: PwaService) => () => {

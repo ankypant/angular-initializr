@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { NoCacheHeadersInterceptor } from './interceptors/no-cache-header.interceptor';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PwaModule } from './services/pwa/pwa.module';
-import { AuthModule } from './services/auth/auth.module';
-import { StorageModule } from './services/storage/storage.module';
 import { FlexCustomBreakpointsModule } from './flex-custom-breakpoints/flex-custom-breakpoints.module';
 
 /**
@@ -17,9 +15,7 @@ import { FlexCustomBreakpointsModule } from './flex-custom-breakpoints/flex-cust
   imports: [
     CommonModule,
     HttpClientModule,
-    AuthModule,
     PwaModule,
-    StorageModule,
     FlexCustomBreakpointsModule,
   ],
   providers: [

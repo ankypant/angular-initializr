@@ -3,6 +3,10 @@
   background-repeat: repeat-x;
   .form-wrapper {
     height: 100%;
+    &__angular-logo {
+      display: flex;
+      justify-content: center;
+    }
     mat-card {
       padding: 20px;
       img {
@@ -16,9 +20,5 @@
     button {
       width: 100%;
     }
-  }
-  .angular-logo {
-    display: flex;
-    justify-content: center;
   }
 }

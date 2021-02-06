@@ -7,7 +7,9 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class NoCacheHeadersInterceptor implements HttpInterceptor {
   intercept(
     req: HttpRequest<any>,

@@ -11,9 +11,9 @@ const USER_DETAILS = 'user_details';
 export class AuthService {
   public userDetails$: Observable<UserDetails>;
   public isLoggedIn$: Observable<boolean>;
-  private authSubject: BehaviorSubject<UserDetails> = new BehaviorSubject<
-    UserDetails
-  >(null);
+  private authSubject: BehaviorSubject<UserDetails> = new BehaviorSubject<UserDetails>(
+    null
+  );
 
   constructor(
     private httpClient: HttpClient,
@@ -31,7 +31,7 @@ export class AuthService {
     // 	);
 
     // GETTING USER DETAILS FROM JSON SERVER
-    return this.httpClient.get<UserDetails>('userDetails').pipe(
+    return this.httpClient.get<UserDetails>('user-details').pipe(
       tap(userDetails => {
         this.storageService.set(USER_DETAILS, userDetails);
         this.authSubject.next(userDetails);
