@@ -5739,6 +5739,13 @@ karma-jasmine@~4.0.0:
   dependencies:
     jasmine-core "^3.6.0"
 
+karma-sonarqube-unit-reporter@^0.0.23:
+  version "0.0.23"
+  resolved "https://registry.yarnpkg.com/karma-sonarqube-unit-reporter/-/karma-sonarqube-unit-reporter-0.0.23.tgz#ed7d7fc33dda49a255fe17477968e0f10829174f"
+  integrity sha512-Mp1b8pkZzFxRWS2eeEDzkrPXIlotRckLJ0C2fXUiUoilAVYJ5AiAyYN14cJzxGbRx65DdXBpu5LI+lt+MHigWA==
+  dependencies:
+    xmlbuilder "^13.0.2"
+
 karma-source-map-support@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/karma-source-map-support/-/karma-source-map-support-1.4.0.tgz#58526ceccf7e8730e56effd97a4de8d712ac0d6b"
@@ -8611,6 +8618,11 @@ socks@^2.3.3:
     ip "^1.1.5"
     smart-buffer "^4.1.0"
 
+sonar-scanner@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/sonar-scanner/-/sonar-scanner-3.1.0.tgz#51c1c1101f54b98abc5d8565209b1d9232979343"
+  integrity sha1-UcHBEB9UuYq8XYVlIJsdkjKXk0M=
+
 source-list-map@^2.0.0, source-list-map@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.1.tgz#3993bd873bfc48479cca9ea3a547835c7c154b34"
@@ -9889,6 +9901,11 @@ xdg-basedir@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-4.0.0.tgz#4bc8d9984403696225ef83a1573cbbcb4e79db13"
   integrity sha512-PSNhEJDejZYV7h50BohL09Er9VaIefr2LMAf3OEmpCkjOi34eYyQYAXUTjEQtZJTKcF0E2UKTh+osDLsgNim9Q==
+
+xmlbuilder@^13.0.2:
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-13.0.2.tgz#02ae33614b6a047d1c32b5389c1fdacb2bce47a7"
+  integrity sha512-Eux0i2QdDYKbdbA6AM6xE4m6ZTZr4G4xF9kahI2ukSEMCzwce2eX9WlTI5J3s+NU7hpasFsr8hWIONae7LluAQ==
 
 xmlhttprequest-ssl@~1.5.4:
   version "1.5.5"
