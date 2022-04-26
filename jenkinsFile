@@ -1,10 +1,16 @@
 pipeline {
-    agent any
-     tools {
-       nodejs "node"
+  agent any
+  tools {
+    nodejs "node"
+  }
+
+  stages {
+    stage('Checkout') {
+      steps {
+        checkout scm
       }
-      
-    stages {
+  }
+
     stage('Install') {
       steps { 
         sh 'npm install'
