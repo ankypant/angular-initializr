@@ -1,23 +1,35 @@
-node ('node') {
-  stages {
+pipeline {
+    agent any
+     tools {
+       nodejs "node"
+      }
+      
+    stages {
     stage('Install') {
-      steps { sh 'npm install' }
+      steps { 
+        sh 'npm install'
+        sh 'npm install -g @angular/cli@11'
+        sh 'ng --version'
+      }
     }
-
+    
     stage('Test') {
-      // parallel {
-      //   stage('Static code analysis') {
-      //       // steps { sh 'npm run-script lint' }
-      //       echo "Disabled Linting for now"
-      //   }
-        stage('Unit tests') {
-            steps { sh 'npm run-script test' }
-        // }
+      steps {
+        sh 'npm run test'
       }
     }
 
     stage('Build') {
-      steps { sh 'npm run-script build' }
+      steps {
+        sh 'npm run build'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        milestone(20)
+        echo "Deploying..."
+      }
     }
   }
 }
