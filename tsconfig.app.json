@@ -3,10 +3,18 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@env": ["environments/environment"],
-      "@shared/*": ["./src/app/shared/*"],
-      "@core/*": ["./src/app/core/*"],
-      "@utils/*": ["./src/app/utils/*"]
+      "@env": [
+        "environments/environment"
+      ],
+      "@shared/*": [
+        "./src/app/shared/*"
+      ],
+      "@core/*": [
+        "./src/app/core/*"
+      ],
+      "@utils/*": [
+        "./src/app/utils/*"
+      ]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -15,9 +23,13 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2020",
+    "target": "ES2022",
     "module": "es2020",
-    "lib": ["es2018", "dom"]
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "useDefineForClassFields": false
   },
   "files": ["src/main.ts", "src/polyfills.ts"],
   "include": ["src/**/*.d.ts"]
