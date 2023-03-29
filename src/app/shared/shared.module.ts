@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
@@ -43,14 +42,12 @@ const ngMaterialModules: any[] = [
   ],
   imports: [
     CommonModule,
-    FlexLayoutModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
     ...ngMaterialModules,
   ],
   exports: [
-    FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
     ...fromComponents.components,
