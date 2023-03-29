@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '@core/services/auth/auth.service';
 import { ErrorhandlingService } from '@core/services/error-handling/error-handling.service';
 import { UserDetails, AuthDetails } from '@core/services/auth/auth.interface';
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   constructor(
     public authService: AuthService,
     private errorhandlingService: ErrorhandlingService,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private router: Router
   ) {}
 
