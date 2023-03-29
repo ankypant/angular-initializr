@@ -48,3 +48,6 @@ Thumbs.db
 # Sonar
 /reports
 .scannerwork
+
+# cache
+.angular

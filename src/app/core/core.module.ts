@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NoCacheHeadersInterceptor } from './interceptors/no-cache-header.interceptor';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {
+  HttpClientModule,
+  HTTP_INTERCEPTORS,
+} from '@angular/common/http';
 import { PwaModule } from './services/pwa/pwa.module';
-import { FlexCustomBreakpointsModule } from './flex-custom-breakpoints/flex-custom-breakpoints.module';
 
 /**
  *  In Core Module we place all singleton services and
@@ -12,12 +14,7 @@ import { FlexCustomBreakpointsModule } from './flex-custom-breakpoints/flex-cust
  */
 
 @NgModule({
-  imports: [
-    CommonModule,
-    HttpClientModule,
-    PwaModule,
-    FlexCustomBreakpointsModule,
-  ],
+  imports: [CommonModule, HttpClientModule, PwaModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
